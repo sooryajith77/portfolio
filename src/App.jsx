@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "./App.css";
-import profileImg from "./assets/fferg.jpg";
+import profileImg from "./assets/Screenshot 2026-06-26 213913.png";
 import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaWhatsapp, FaChartLine } from "react-icons/fa";
 import emailjs from '@emailjs/browser';
 
@@ -140,20 +140,30 @@ function App() {
   ];
   
   // Projects data
-  const projects = [
-    {
-      title: "CRM System",
-      desc: "Customer Relationship Management system with authentication and role-based access",
-      tech: ["React", "Node.js", "PostgreSQL", "JWT"],
-      icon: FaChartLine,
-      category: "fullstack",
-      features: ["User auth", "Lead & company,Deals,Tickets management"],
-      github: "#",
-      demo: "https://crm-idg36a66y-sooryajiths-projects-978018ba.vercel.app",
-      image: "/images/crm-dashboard.png",
-      color: "#8b5cf6"
-    }
-  ];
+ const projects = [
+  {
+    title: "CRM System",
+    desc: "Customer Relationship Management system with authentication and role-based access",
+    tech: ["React", "Node.js", "PostgreSQL", "JWT"],
+    category: "fullstack",
+    features: ["User auth", "Lead & company, Deals, Tickets management"],
+    github: "#",
+    demo: "https://crm-idg36a66y-sooryajiths-projects-978018ba.vercel.app",
+    image: "/images/crm-dashboard.png",
+    color: "#8b5cf6"
+  },
+  {
+    title: "SHOPCO",
+    desc: "Ecommerce Application",
+    tech: ["React", "Node.js", "PostgreSQL", "JWT"],
+    category: "fullstack",
+    features: ["User authentication", "E-commerce management"],
+    github: "https://github.com/sooryajith77/shopco",
+    demo: "https://your-shopco-demo.vercel.app",
+    image: "/images/shopco.png",
+    color: "#06b6d4"
+  }
+];
 
   const skills = [
     { name: "React.js", level: 85, icon: "⚛️", color: "#61DAFB" },
@@ -268,36 +278,64 @@ function App() {
             </div>
           </motion.div>
 
-          <div className="projects-grid">
-            {projects
-              .filter(p => activeFilter === "all" || p.category === activeFilter)
-              .map((project, index) => (
-                <motion.div
-                  key={index}
-                  className="project-card"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  whileHover={{ y: -8 }}
-                >
-                  <div className="project-icon" style={{ background: `${project.color}20`, color: project.color }}>
-                    <project.icon />
-                  </div>
-                  <h3 className="project-title">{project.title}</h3>
-                  <p className="project-description">{project.desc}</p>
-                  <div className="project-tech">
-                    {project.tech.map((tech, i) => (
-                      <span key={i} className="tech-tag">{tech}</span>
-                    ))}
-                  </div>
-                  <div className="project-links">
-                    <a href={project.github} className="project-link">Code →</a>
-                    <a href={project.demo} className="project-link">Demo →</a>
-                  </div>
-                </motion.div>
-              ))}
-          </div>
+         <div className="projects-grid">
+  {projects
+    .filter((p) => activeFilter === "all" || p.category === activeFilter)
+    .map((project, index) => (
+      <motion.div
+        key={index}
+        className="project-card"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: index * 0.1 }}
+        whileHover={{ y: -8 }}
+      >
+        {/* Project Image */}
+        <img
+          src={project.image}
+          alt={project.title}
+          className="project-image"
+        />
+
+        {/* Project Title */}
+        <h3 className="project-title">{project.title}</h3>
+
+        {/* Description */}
+        <p className="project-description">{project.desc}</p>
+
+        {/* Technologies */}
+        <div className="project-tech">
+          {project.tech.map((tech, i) => (
+            <span key={i} className="tech-tag">
+              {tech}
+            </span>
+          ))}
+        </div>
+
+        {/* Links */}
+        <div className="project-links">
+          <a
+            href={project.github}
+            className="project-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Code →
+          </a>
+
+          <a
+            href={project.demo}
+            className="project-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Demo →
+          </a>
+        </div>
+      </motion.div>
+    ))}
+</div>
         </div>
       </section>
 
