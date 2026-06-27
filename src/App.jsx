@@ -4,7 +4,24 @@ import "./App.css";
 import profileImg from "./assets/Screenshot 2026-06-26 213913.png";
 import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaWhatsapp, FaChartLine } from "react-icons/fa";
 import emailjs from '@emailjs/browser';
+import {
+  FaReact,
+  FaNodeJs,
+  FaHtml5,
+  FaCss3Alt,
+  FaGitAlt,
+} from "react-icons/fa";
 
+import {
+  SiJavascript,
+  SiExpress,
+  SiMongodb,
+  SiPostgresql,
+  SiTypescript,
+  SiRedux,
+  SiNextdotjs,
+  SiMui,
+} from "react-icons/si";
 function App() {
   const [activeFilter, setActiveFilter] = useState("all");
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -165,36 +182,104 @@ function App() {
   }
 ];
 
-  const skills = [
-    { name: "React.js", level: 85, icon: "⚛️", color: "#61DAFB" },
-    { name: "Node.js", level: 80, icon: "🟢", color: "#68A063" },
-    { name: "JavaScript", level: 85, icon: "🟨", color: "#F7DF1E" },
-    { name: "Express.js", level: 80, icon: "🚂", color: "#000000" },
-    { name: "MongoDB", level: 75, icon: "🍃", color: "#47A248" },
-    { name: "HTML", level: 85, icon: "🧱", color: "#E34C26" },
-    { name: "CSS", level: 85, icon: "🎨", color: "#264DE4" },
-    { name: "PostgreSQL", level: 85, icon: "🐘", color: "#336791" },
-    { name: "Git", level: 85, icon: "🔧", color: "#F05032" },
-    { name: "TypeScript", level: 85, icon: "🔷", color: "#3178C6" },
-    { name: "Redux", level: 85, icon: "🔮", color: "#764ABC" },
-    { name: "Next.js", level: 85, icon: "▲", color: "#000000" },
-    { name: "Material UI", level: 85, icon: "📦", color: "#007FFF" }
-  ];
+ const skills = [
+  {
+    name: "React.js",
+    level: 85,
+    icon: <FaReact />,
+    color: "#61DAFB",
+  },
+  {
+    name: "Node.js",
+    level: 80,
+    icon: <FaNodeJs />,
+    color: "#68A063",
+  },
+  {
+    name: "JavaScript",
+    level: 85,
+    icon: <SiJavascript />,
+    color: "#F7DF1E",
+  },
+  {
+    name: "Express.js",
+    level: 80,
+    icon: <SiExpress />,
+    color: "#000000",
+  },
+  {
+    name: "MongoDB",
+    level: 75,
+    icon: <SiMongodb />,
+    color: "#47A248",
+  },
+  {
+    name: "HTML5",
+    level: 85,
+    icon: <FaHtml5 />,
+    color: "#E34F26",
+  },
+  {
+    name: "CSS3",
+    level: 85,
+    icon: <FaCss3Alt />,
+    color: "#1572B6",
+  },
+  {
+    name: "PostgreSQL",
+    level: 85,
+    icon: <SiPostgresql />,
+    color: "#336791",
+  },
+  {
+    name: "Git",
+    level: 85,
+    icon: <FaGitAlt />,
+    color: "#F05032",
+  },
+  {
+    name: "TypeScript",
+    level: 85,
+    icon: <SiTypescript />,
+    color: "#3178C6",
+  },
+  {
+    name: "Redux",
+    level: 85,
+    icon: <SiRedux />,
+    color: "#764ABC",
+  },
+  {
+    name: "Next.js",
+    level: 85,
+    icon: <SiNextdotjs />,
+    color: "#000000",
+  },
+  {
+    name: "Material UI",
+    level: 85,
+    icon: <SiMui />,
+    color: "#007FFF",
+  },
+];
 
-  const experiences = [
-    {
-      role: "Full Stack Developer Intern",
-      company: "TechStart Solutions",
-      duration: "2024 - Present",
-      description: "Developing full-stack applications using React and Node.js. Collaborating with senior developers on production features."
-    },
-    {
-      role: "Web Development Trainee",
-      company: "Code Academy",
-      duration: "2023 - 2024",
-      description: "Completed intensive training program. Built 10+ projects and learned industry best practices."
-    }
-  ];
+  const achievements = [
+  {
+    title: "CRM System",
+    description:
+      "Built a production-ready CRM with JWT authentication, role-based access, PostgreSQL, Sequelize, dashboard analytics, and deployment on Vercel & Render."
+  },
+  {
+    title: "SHOPCO E-Commerce",
+    description:
+      "Developed a responsive full-stack e-commerce platform with authentication, product management, shopping cart, wishlist, and REST APIs."
+  },
+  {
+    title: "Full Stack Developer",
+    description:
+      "Strong knowledge of React.js, Next.js, Node.js, Express.js, MongoDB, PostgreSQL, Git, and REST API development."
+  }
+];
 
   return (
     <div className="app">
@@ -363,9 +448,15 @@ function App() {
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ y: -5 }}
               >
-                <div className="skill-icon" style={{ background: `${skill.color}20` }}>
-                  <span style={{ fontSize: "32px" }}>{skill.icon}</span>
-                </div>
+                <div
+  className="skill-icon"
+  style={{
+    background: `${skill.color}20`,
+    color: skill.color,
+  }}
+>
+  {skill.icon}
+</div>
                 <h3 className="skill-name">{skill.name}</h3>
                 <div className="skill-bar">
                   <motion.div 
@@ -385,40 +476,44 @@ function App() {
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="section">
-        <div className="container">
-          <motion.div 
-            className="section-header"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="section-title">Experience</h2>
-            <p className="section-subtitle">My professional journey</p>
-          </motion.div>
+     <section id="achievements" className="section">
+  <div className="container">
+    <motion.div
+      className="section-header"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+    >
+      <h2 className="section-title">Achievements</h2>
+      <p className="section-subtitle">
+        Highlights of my development journey
+      </p>
+    </motion.div>
 
-          <div className="timeline">
-            {experiences.map((exp, index) => (
-              <motion.div
-                key={index}
-                className="timeline-item"
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-              >
-                <div className="timeline-dot"></div>
-                <div className="timeline-content">
-                  <h3 className="timeline-role">{exp.role}</h3>
-                  <p className="timeline-company">{exp.company}</p>
-                  <p className="timeline-date">{exp.duration}</p>
-                  <p className="timeline-description">{exp.description}</p>
-                </div>
-              </motion.div>
-            ))}
+    <div className="timeline">
+      {achievements.map((item, index) => (
+        <motion.div
+          key={index}
+          className="timeline-item"
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: index * 0.15 }}
+        >
+          <div className="timeline-dot"></div>
+
+          <div className="timeline-content">
+            <h3 className="timeline-role">{item.title}</h3>
+            <p className="timeline-date">{item.year}</p>
+            <p className="timeline-description">
+              {item.description}
+            </p>
           </div>
-        </div>
-      </section>
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* Education Section */}
       <section className="section">
