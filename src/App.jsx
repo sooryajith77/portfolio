@@ -120,7 +120,7 @@ function App() {
       setFormStatus({
         submitted: true,
         success: true,
-        message: "✅ Message sent successfully! I'll get back to you soon."
+        message: " Message sent successfully! I'll get back to you soon."
       });
       
       // Clear form
@@ -295,7 +295,7 @@ function App() {
           </motion.div>
           
           <div className={`nav-links ${isMenuOpen ? "active" : ""}`}>
-            {["Home", "Projects", "Skills", "Experience", "Contact"].map((item) => (
+            {["Home", "Projects", "Skills", "Achievements", "Contact"].map((item) => (
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
@@ -328,7 +328,7 @@ function App() {
             />
           </div>
           <div className="hero-right">
-            <h1>Hi, I'm <span className="gradient-text">Surya</span></h1>
+            <h1>Hi, I'm <span className="gradient-text">Sooryajith</span></h1>
             <h2>Full Stack Developer</h2>
             <p>Passionate about building scalable and beautiful web applications.</p>
             <div className="hero-buttons">
@@ -538,7 +538,7 @@ function App() {
             <h3 className="education-degree">Bachelor of Computer application</h3>
             <p className="education-university">Calicut University, Kerala</p>
             <p className="education-year">2022 - 2025</p>
-            <p className="education-cgpa">CGPA: 8.5/10</p>
+            <p className="education-cgpa">CGPA: 5.6/10</p>
           </motion.div>
         </div>
       </section>
