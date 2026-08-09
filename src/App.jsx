@@ -601,7 +601,7 @@ function App() {
                     name="name"
                     value={formData.name}
                     onChange={handleInputChange}
-                    placeholder="Enter your full name"
+                    placeholder=""
                     required
                   />
                 </div>
@@ -613,7 +613,7 @@ function App() {
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
-                    placeholder="you@example.com"
+                    placeholder=""
                     required
                   />
                 </div>
@@ -626,7 +626,7 @@ function App() {
                   name="subject"
                   value={formData.subject}
                   onChange={handleInputChange}
-                  placeholder="What's this about?"
+                  placeholder=""
                 />
               </div>
               <div className="form-group">
@@ -636,7 +636,7 @@ function App() {
                   name="message"
                   value={formData.message}
                   onChange={handleInputChange}
-                  placeholder="Tell me about your project, opportunity, or just say hello!"
+                  placeholder=""
                   rows="5"
                   required
                 ></textarea>
@@ -646,7 +646,7 @@ function App() {
                 className="submit-btn"
                 disabled={isSubmitting}
               >
-                {isSubmitting ? "Sending..." : "Send Message ✉️"}
+                {isSubmitting ? "Sending..." : "Send Message"}
               </button>
 
               <AnimatePresence>

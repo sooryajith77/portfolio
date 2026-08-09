@@ -1,16 +1,6 @@
 import React, { useRef, useEffect } from "react";
 
-/**
- * NeuralBackground
- * A full-viewport, fixed, canvas-based animated network of nodes and
- * connecting lines with simulated depth (z-axis) for a 3D parallax feel.
- * Pure Canvas 2D — no extra dependencies (three.js / react-three-fiber)
- * required. Sits behind all page content (z-index handled via CSS class
- * `.neural-bg`) and never intercepts pointer events.
- *
- * Palette: black background, red (#ff1b3d) nodes/lines — matches the
- * portfolio's black & red theme.
- */
+
 export default function NeuralBackground() {
   const canvasRef = useRef(null);
   const rafRef = useRef(null);
