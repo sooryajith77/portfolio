@@ -9,6 +9,10 @@ import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaWhatsapp, FaChartLine }
 import emailjs from '@emailjs/browser';
 import NeuralBackground from "./components/NeuralBackground";
 import { useTypewriter } from "./components/useTypewriter";
+import { AiOutlineMail } from "react-icons/ai";
+import { MdWorkOutline } from "react-icons/md";
+import { IoIosLaptop } from "react-icons/io";
+
 import {
   FaReact,
   FaNodeJs,
@@ -570,7 +574,48 @@ function App() {
           </motion.div>
         </div>
       </section>
+{/* Training & Certifications Section */}
+<section className="section">
+  <div className="container">
+    <motion.div
+      className="section-header"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+    >
+      <h2 className="section-title">Training & Certifications</h2>
+      <p className="section-subtitle">
+        Professional training and certifications
+      </p>
+    </motion.div>
 
+    <motion.div
+      className="education-card"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+    >
+      <div className="education-icon"><IoIosLaptop />
+</div>
+
+      <h3 className="education-degree">
+        Full Stack Web Development
+      </h3>
+
+      <p className="education-university">
+        MERN Stack | Upcode Software Labs
+      </p>
+
+      <p className="education-year">
+        6-Month Course
+      </p>
+
+      <p className="education-cgpa">
+        React.js • Node.js • Express.js • MongoDB • PostgreSQL • REST APIs
+      </p>
+    </motion.div>
+  </div>
+</section>
       {/* Contact Section */}
       <section id="contact" className="section contact-section">
         <div className="container">
@@ -671,7 +716,7 @@ function App() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <div className="contact-icon">📧</div>
+              <div className="contact-icon"><AiOutlineMail /></div>
               <h3>Email Directly</h3>
               <p>soorya8590@gmail.com</p>
               <button className="contact-btn" onClick={copyEmail}>
@@ -685,7 +730,8 @@ function App() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <div className="contact-icon">💼</div>
+              <div className="contact-icon"><MdWorkOutline />
+</div>
               <h3>Open to Work</h3>
               <p>Full Stack Developer</p>
               <button
