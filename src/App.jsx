@@ -1043,13 +1043,13 @@ function App() {
     },
     {
       name: "HTML5",
-      level: 85,
+      level: 100,
       icon: <FaHtml5 />,
       color: "#e34f26",
     },
     {
       name: "CSS3",
-      level: 85,
+      level: 100,
       icon: <FaCss3Alt />,
       color: "#1572b6",
     },
@@ -1061,13 +1061,13 @@ function App() {
     },
     {
       name: "Git",
-      level: 85,
+      level: 100,
       icon: <FaGitAlt />,
       color: "#f05032",
     },
     {
       name: "TypeScript",
-      level: 85,
+      level: 70,
       icon: <SiTypescript />,
       color: "#3178c6",
     },
@@ -1115,8 +1115,8 @@ function App() {
       color: "#8ca1af",
     },
     {
-      name: "Project Documentation",
-      level: 80,
+      name: "MS word",
+      level:100,
       icon: <FaFileAlt />,
       color: "#ffa94d",
     },
