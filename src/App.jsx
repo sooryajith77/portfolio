@@ -1133,7 +1133,7 @@ function App() {
     },
     {
       title: "Full Stack Developer & Technical Writer",
-      description: "Strong knowledge of React.js, Next.js, Node.js, Express.js, MongoDB, PostgreSQL, Git, REST API development, and technical documentation with Markdown and Swagger."
+      description: "Strong knowledge of React.js, Next.js, Node.js, Express.js, MongoDB, PostgreSQL, Git, REST API development, and technical documentation with Markdown ."
     },
     
   ];
