@@ -265,7 +265,18 @@ function App() {
       level: 80,
       icon: <SiMui />,
       color: "#007fff",
-    },
+    },{
+  name: "TypeScript",
+  level: 80,
+  icon: <SiTypescript />,
+  color: "#3178C6",
+},
+{
+  name: "PostgreSQL",
+  level: 80,
+  icon: <SiPostgresql />,
+  color: "#4169E1",
+},
   ];
 
   const achievements = [
