@@ -392,9 +392,9 @@ function App() {
       </p>
 
       <ul className="experience-details">
-        <li>Developed responsive interfaces using React.js.</li>
+        <li>Developed responsive interfaces using React.js/Next.js.</li>
         <li>Built REST APIs using Node.js and Express.js.</li>
-        <li>Worked with MongoDB to store and manage data.</li>
+        <li>Worked with MongoDB/PostgreSQL to store and manage data.</li>
         <li>Used Git for version control.</li>
       </ul>
 
