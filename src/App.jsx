@@ -354,7 +354,61 @@ function App() {
           </div>
         </div>
       </section>
+{/* Internship Experience */}
+<section id="experience" className="section">
+  <div className="container">
+    <motion.div
+      className="section-header"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+    >
+      <h2 className="section-title">Experience</h2>
+      <p className="section-subtitle">
+        Internship and practical development experience
+      </p>
+    </motion.div>
 
+    <motion.div
+      className="education-card"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+    >
+      <div className="education-icon">
+        <MdWorkOutline />
+      </div>
+
+      <h3 className="education-degree">
+        MERN Stack Developer Intern
+      </h3>
+
+      <p className="education-university">
+       Upcode software labs.L.L.P
+      </p>
+
+      <p className="education-year">
+        11/08/2025 – 21/04/2026
+      </p>
+
+      <ul className="experience-details">
+        <li>Developed responsive interfaces using React.js.</li>
+        <li>Built REST APIs using Node.js and Express.js.</li>
+        <li>Worked with MongoDB to store and manage data.</li>
+        <li>Used Git for version control.</li>
+      </ul>
+
+      <a
+  href="/certificates/Sooryajith.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="btn-secondary certificate-link"
+>
+  View Internship Certificate
+</a>
+    </motion.div>
+  </div>
+</section>
       {/* Projects Section */}
       <section id="projects" className="section">
         <div className="container">

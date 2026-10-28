@@ -669,3 +669,22 @@ h1, h2, h3, h4 {
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }
 }
+
+
+.experience-details {
+  max-width: 650px;
+  margin: 20px auto;
+  padding-left: 24px;
+  text-align: left;
+  line-height: 1.8;
+}
+
+.experience-details li {
+  margin-bottom: 8px;
+}
+
+.certificate-link {
+  display: inline-block;
+  margin-top: 16px;
+  text-decoration: none;
+}
