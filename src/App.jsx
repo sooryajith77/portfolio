@@ -618,7 +618,7 @@ function App() {
             <h3 className="education-degree">Bachelor of Computer Application</h3>
             <p className="education-university">Calicut University, Kerala</p>
             <p className="education-year">2022 - 2025</p>
-            <p className="education-cgpa">CGPA: 5.6/10</p>
+            <p className="education-cgpa">CGPA: 56.17</p>
           </motion.div>
         </div>
       </section>
